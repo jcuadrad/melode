@@ -1,5 +1,8 @@
+// Angular Core
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
 
 // Services
 import { AuthService } from './services/auth/auth.service';
@@ -26,7 +29,11 @@ import { OdeGeniusFactComponent } from './components/ode-genius-fact/ode-genius-
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
-
+const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: PageLoginComponent },
+  { path: 'share', component: PageShareOdeComponent },
+];
 
 @NgModule({
   declarations: [
@@ -46,7 +53,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     NavBarComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [ AuthService, UserService, OdeService ],
   bootstrap: [AppComponent]

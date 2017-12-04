@@ -1,0 +1,19 @@
+nav {
+    height: 15vw;
+}
+
+.nav-logo {
+    height: 100%;
+}
+
+.logo-side {
+    height: 100%;
+    width: 50%;
+    background-color: #111111;
+}
+
+.right-side {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
