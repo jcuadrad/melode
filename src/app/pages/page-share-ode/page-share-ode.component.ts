@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OdeService } from '../../services/ode/ode.service';
 
 @Component({
   selector: 'app-page-share-ode',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageShareOdeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private odeService: OdeService) { }
 
   ngOnInit() {
+  }
+
+  handleSubmit(newOde) {
+    this.odeService.createOde(newOde.value);
   }
 
 }
