@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatStepperModule } from '@angular/material';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-ode-form',
@@ -6,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ode-form.component.css']
 })
 export class OdeFormComponent implements OnInit {
+
+  formGroup1 = new FormGroup({});
+  formGroup2 = new FormGroup({});
+  snippet: string;
 
   constructor() { }
 

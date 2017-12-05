@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
 html, body {
     font-family: "Roboto";
     height: 100%;
@@ -9,3 +13,7 @@ html, body {
 h1 {
     font-size: 13vw;
 }
+
+/* .mat-horizontal-stepper-header-container {
+    display: none !important;
+} */

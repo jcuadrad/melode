@@ -1,8 +1,13 @@
 // Angular Core
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+
+// Angular Material Components
+import { MatStepperModule } from '@angular/material';
 
 // Services
 import { AuthService } from './services/auth/auth.service';
@@ -54,7 +59,11 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatStepperModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ AuthService, UserService, OdeService ],
