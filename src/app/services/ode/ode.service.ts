@@ -17,12 +17,12 @@ export class OdeService {
     return this.http.post(baseUrl, newOde);
   }
 
-  getRandom(excludeIds, require) {
+  getRandom(excludeIds) {
     const filter = {
-      excludeIds,
-      require
+      excludeIds
     };
-    return this.http.post(baseUrl + '/random', filter);
+    return this.http.post(baseUrl + '/random', filter)
+     .map(response => response.json());
   }
 
 }

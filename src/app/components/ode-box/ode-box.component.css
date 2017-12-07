@@ -2,7 +2,7 @@
     float:left;
     height:100%;
     width:100%;
-    max-width:400px;
+    /* max-width:400px; */
   }
   
   .right-panel {
@@ -18,18 +18,24 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height:80%;
-    width:80%;
-    margin:10px auto;
+    width:90%;
+    height: 83%;
+    margin-top: -11vw;
+    /* margin:10px auto; */
   }
   
   sc-card {
+    height: 540px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-height: 400px;
+    max-height: 72%;
     max-width: 400px;
+  }
+
+  .card-header {
+    display: none;
   }
   
   .card-header span {
@@ -53,8 +59,19 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-  
+    text-align: center;
   }
+
+  .card-content h1 {
+    font-size: 20vw;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  .medium {
+    font-size: 16vw !important;
+ }  
   
   .card-content img {
     max-width:90%;
@@ -63,7 +80,7 @@
   
   .buttons {
     width:100%;
-    margin-top: 30px;
+    margin-top: -23px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,4 +104,8 @@
   .log-container span {
     display:block;
     width:100%;
+  }
+
+  .card-container ::ng-deep .card-heap[_nghost-c4]:nth-child(1) {
+    box-shadow: none !important;
   }

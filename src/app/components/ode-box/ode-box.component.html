@@ -1,20 +1,18 @@
 <div class="left-panel">
     <div class="card-container">
         <sc-card
-          *ngFor="let card of cards;let i = index;"
-          [callDestroy]="card.destroyEvent"
+          *ngFor="let ode of odes;let i = index;"
+          [callDestroy]="ode.destroyEvent"
           [orientation]="orientation"
           (onRelease)="onRelease($event)"
           (onSwipe)="onSwipe($event)"
           (onAbort)="onAbort($event)"
           [tinder-card]="overlay"
-          [callLike]="card.likeEvent"
-          (onLike)="onCardLike($event)">
-          <div class="card-header">
-            <span>{{card.id}}</span>
-          </div>
+          [callLike]="ode.likeEvent"
+          (onLike)="onCardLike($event)"
+          style="box-shadow: none !important;">
           <div class="card-content">
-            <img [src]="card.url" draggable="false"/>
+            <h1 [ngClass]="{medium: ode.document.snippet.length > 30}">{{ode.document.snippet}}</h1>
           </div>
         </sc-card>
     </div>

@@ -1,90 +1,92 @@
 import { Component, ViewEncapsulation, ViewChild, TemplateRef, EventEmitter, NgModule, OnInit } from '@angular/core';
 import { SwipeCardsModule } from 'ng2-swipe-cards';
+import { OdeService } from '../../services/ode/ode.service';
 
+const BUFFER = 2;
 
 @Component({
   selector: 'app-ode-box',
   templateUrl: './ode-box.component.html',
-  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./ode-box.component.css']
 })
 export class OdeBoxComponent implements OnInit {
 
-  @ViewChild('cardLog') cardLogContainer: any;
-  @ViewChild('tinderCardLog') tinderCardLogContainer: any;
-
-
+  loading = true;
+  odes: any[] = [];
   cards: any[] = [];
-  cardCursor: number = 0;
-  orientation: string = "x";
+  cardCursor = 0;
+  orientation = 'x';
   overlay: any = {
-      like: {
-          backgroundColor: '#28e93b'
-      },
-      dislike: {
-          backgroundColor: '#e92828'
-      }
+    like: {
+      backgroundColor: 'transparent'
+  },
+    dislike: {
+      backgroundColor: '#e92828'
+  }
   };
 
-  cardLogs: any = [];
-  tinderCardLogs: any = [];
+  constructor(private odeService: OdeService) {}
 
-  constructor() {}
+  ngOnInit() {
+    this.getMore();
+  }
 
-   like(like) {
-    const self = this;
-    if (this.cards.length > 0) {
-        self.cards[this.cardCursor++].likeEvent.emit({ like });
-        // DO STUFF WITH YOUR CARD
-        this.tinderCardLogs.push('callLike(' + JSON.stringify({ like }) + ')');
-        // this.scrollToBottom(this.tinderCardLogContainer);
+  private getMore() {
+    if (this.cardCursor < this.odes.length - BUFFER) {
+      return;
     }
-}
+    this.odeService.getRandom(this.odes.map(ode => ode._id))
+    .subscribe(
+      (result) => {
+        this.loading = false;
+        const newResult = result.map(ode => Object.defineProperty(ode, 'likeEvent', {
+          enumerable: false,
+          configurable: false,
+          writable: false,
+          value: new EventEmitter()
+        }));
+        this.odes = this.odes.concat(newResult);
+        console.log(newResult);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
 
-onCardLike(event) {
-    const item = this.cards[this.cardCursor++];
+  onCardLike(event) {
+    const item = this.odes[this.cardCursor++];
     // DO STUFF WITH YOUR CARD
-    this.tinderCardLogs.push('onLike(' + JSON.stringify(event) + ')');
-    // this.scrollToBottom(this.tinderCardLogContainer);
-}
+  }
 
-getKittenUrl() {
-    const w = 500 - Math.floor((Math.random() * 100) + 1);
-    const h = 500 - Math.floor((Math.random() * 100) + 1);
-    return 'http://placekitten.com/' + w + '/' + h;
-}
-
-onRelease(event) {
-    this.cardLogs.push('onRelease(event)');
-    // this.scrollToBottom(this.cardLogContainer);
-    console.log(this.cards);
-    console.log(this.cardCursor);
-}
-
-onAbort(event) {
-    this.cardLogs.push('onAbort(event)');
-    // this.scrollToBottom(this.cardLogContainer);
-}
-
-onSwipe(event) {
-    this.cardLogs.push('onSwipe(event)');
-    // this.scrollToBottom(this.cardLogContainer);
-}
-
-// scrollToBottom(el) {
-//     setTimeout(() => {
-//         el.nativeElement.scrollTop = el.nativeElement.scrollHeight;
-//     }, 100);
-// }
-
-    ngOnInit() {
-        for (let i = 0; i < 50; i++) {
-        this.cards.push({
-            id: i + 1,
-            likeEvent: new EventEmitter(),
-            destroyEvent: new EventEmitter(),
-            url: this.getKittenUrl()
-        });
+  like(like) {
+    if (this.odes.length > 0) {
+    this.odes[this.cardCursor++].likeEvent.emit({ like });
+    this.getMore();
+    // DO STUFF WITH YOUR CARD
     }
   }
+
+  getKittenUrl() {
+    console.log('Why the fuck am I being called');
+  }
+
+  onRelease(event) {
+    // this.cardLogs.push('onRelease(event)');
+    // this.scrollToBottom(this.cardLogContainer);
+    this.getMore();
+    console.log('onRelease()');
+    console.log(this.cards);
+    console.log(this.cardCursor);
+  }
+
+  onAbort(event) {
+    // this.cardLogs.push('onAbort(event)');
+    console.log('onAbort()');
+    // this.scrollToBottom(this.cardLogContainer);
+  }
+
+  onSwipe(event) {
+  }
+
 }

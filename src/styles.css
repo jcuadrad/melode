@@ -25,6 +25,8 @@ h1 {
 
 button {
     -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
 }
 
 .next-arrow {
