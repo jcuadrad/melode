@@ -1,5 +1,5 @@
 
-<form (ngSubmit)="handleSubmit(snippetForm)" [formGroup]="snippetForm" [ngClass]="{medium: snippetForm.value.snippet.length > 30}">
+<form (ngSubmit)="handleSubmit()" [formGroup]="snippetForm" [ngClass]="{medium: snippetForm.value.snippet.length > 30}">
     <mat-horizontal-stepper linear>
     <mat-step [stepControl]="snippetForm">
         <div class="ode-field">

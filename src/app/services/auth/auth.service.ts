@@ -3,10 +3,12 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
+import { environment } from '../../../environments/environment';
+
+const baseUrl = environment.apiUrl + '/auth';
+
 @Injectable()
 export class AuthService {
-
-  baseUrl = 'http://localhost:3000';
 
   constructor(private http: Http) { }
 
