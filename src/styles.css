@@ -23,6 +23,10 @@ h1 {
 
 /* -- components -- */
 
+button {
+    -webkit-appearance: none;
+}
+
 .next-arrow {
     width: 20vw;
 }
