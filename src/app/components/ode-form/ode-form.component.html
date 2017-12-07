@@ -1,30 +1,26 @@
 
-    <form (ngSubmit)="handleSubmit(snippetForm)" [formGroup]="snippetForm">
-      <mat-horizontal-stepper linear>
-        <mat-step [stepControl]="snippetForm">
-          <div class="ode-field">
-            <textarea name="snippet" formControlName="snippet" cols="30" rows="10" placeholder="Type a lyric snippet that you love" wrap="hard" maxlength="50"></textarea>
+<form (ngSubmit)="handleSubmit(snippetForm)" [formGroup]="snippetForm" [ngClass]="{medium: snippetForm.value.snippet.length > 30}">
+    <mat-horizontal-stepper linear>
+    <mat-step [stepControl]="snippetForm">
+        <div class="ode-field">
+        <textarea name="snippet" formControlName="snippet" cols="30" rows="10" placeholder="Type a lyric snippet that you love" wrap="hard" maxlength="50"></textarea>
+        <div class="field submit">
+            <button mat-button matStepperNext type="button">
+                <img src="../../../assets/arrow.png" alt="next" class="next-arrow">
+            </button>
+        </div>
+        </div>
+    </mat-step>
+    <mat-step [stepControl]="snippetForm">
+            <div class="ode-field-info">
+            <input type="text" name="songName" formControlName="songName" placeholder="Song Name">
+            <input type="text" name="artist" formControlName="artist" placeholder="Artist">
             <div class="field submit">
-                <button mat-button matStepperNext type="button">
+                <button mat-button matStepperNext>
                     <img src="../../../assets/arrow.png" alt="next" class="next-arrow">
                 </button>
             </div>
-          </div>
-      </mat-step>
-      <mat-step [stepControl]="snippetForm">
-              <div class="ode-field-info">
-                <input type="text" name="songName" formControlName="songName" placeholder="Song Name">
-                <input type="text" name="artist" formControlName="artist" placeholder="Artist">
-                <div class="field submit">
-                    <button mat-button matStepperNext>
-                        <img src="../../../assets/arrow.png" alt="next" class="next-arrow">
-                    </button>
-                </div>
-              </div>
-            </mat-step>
-          </mat-horizontal-stepper>
-    </form>
-
-    <p>Form value: {{ snippetForm.value | json }}</p>
-    <p>Form status: {{ snippetForm.status | json }}</p>
-  
+            </div>
+        </mat-step>
+        </mat-horizontal-stepper>
+</form>

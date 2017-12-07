@@ -6,6 +6,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+// Swipe Cards
+import { SwipeCardsModule } from 'ng2-swipe-cards';
+
 // Angular Material Components
 import { MatStepperModule } from '@angular/material';
 
@@ -33,11 +36,13 @@ import { OdeFullLyricsComponent } from './components/ode-full-lyrics/ode-full-ly
 import { OdeGeniusFactComponent } from './components/ode-genius-fact/ode-genius-fact.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { OverlayProcessingComponent } from './components/overlay-processing/overlay-processing.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: PageLoginComponent },
   { path: 'share', component: PageShareOdeComponent },
+  { path: 'browse', component: PageBrowseComponent }
 ];
 
 @NgModule({
@@ -56,10 +61,12 @@ const routes: Routes = [
     OdeGeniusFactComponent,
     UserInfoComponent,
     NavBarComponent,
+    OverlayProcessingComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    SwipeCardsModule,
     HttpModule,
     FormsModule,
     ReactiveFormsModule,

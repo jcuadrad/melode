@@ -11,8 +11,15 @@ export class OdeService {
   constructor(private http: Http) { }
 
   createOde(newOde) {
-    this.http.post(this.baseUrl + '/ode', newOde).subscribe();
-    console.log('Posted:' + newOde);
+    return this.http.post(this.baseUrl + '/ode', newOde);
+  }
+
+  getRandom(excludeIds, require) {
+    const filter = {
+      excludeIds,
+      require
+    };
+    return this.http.post(this.baseUrl + '/random', filter);
   }
 
 }

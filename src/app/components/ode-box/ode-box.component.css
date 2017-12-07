@@ -1,0 +1,90 @@
+.left-panel {
+    float:left;
+    height:100%;
+    width:100%;
+    max-width:400px;
+  }
+  
+  .right-panel {
+    float:left;
+    height:100%;
+    width:400px;
+    overflow: auto;
+  }
+  
+  .card-container {
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:80%;
+    width:80%;
+    margin:10px auto;
+  }
+  
+  sc-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 400px;
+    max-width: 400px;
+  }
+  
+  .card-header span {
+    position:absolute;
+    top:5px;
+    left:5px;
+    width:30px;
+    height:30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #E1E1E1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  
+  }
+  
+  .card-content img {
+    max-width:90%;
+    max-height:90%;
+  }
+  
+  .buttons {
+    width:100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;;
+  }
+  
+  /* .buttons button {
+    background-color: #E1E1E1;
+    max-width:160px;
+    width:50%;
+  } */
+
+  .log-container {
+    margin:auto;
+    width:96%;
+    height:15%;
+    border: 1px solid black;
+    overflow-y: scroll;
+  }
+  
+  .log-container span {
+    display:block;
+    width:100%;
+  }

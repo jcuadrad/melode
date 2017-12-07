@@ -23,6 +23,10 @@ textarea {
     overflow: auto;
 }
 
+.medium textarea {
+    font-size: 16vw;
+}  
+
 textarea:focus::-webkit-input-placeholder { 
     color:transparent; 
 }
@@ -58,10 +62,6 @@ input[placeholder] {
     justify-content: center;
     align-items: center;
     margin-top: 21vw;
-}
-
-.next-arrow {
-    width: 20vw;
 }
 
 mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container {

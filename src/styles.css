@@ -1,7 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-*, *:before, *:after {
+/* -- reset -- */
+
+html {
     box-sizing: border-box;
-  }
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+/* -- typography -- */
 
 html, body {
     font-family: "Roboto";
@@ -14,6 +21,32 @@ h1 {
     font-size: 13vw;
 }
 
+/* -- components -- */
+
+.next-arrow {
+    width: 20vw;
+}
+
+.like {
+    width: 20vw;
+}
+
+
+/* -- util -- */ 
+
+.debug {
+    position: absolute;
+    z-index: 9000;
+    top: 0;
+    right: 0;
+    font-size: 8px;
+}
+
+.debug:hover {
+    zoom: 2;
+}
+
 /* .mat-horizontal-stepper-header-container {
     display: none !important;
 } */
+

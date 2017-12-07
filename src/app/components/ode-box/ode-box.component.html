@@ -1,3 +1,29 @@
-<p>
-  ode-box works!
-</p>
+<div class="left-panel">
+    <div class="card-container">
+        <sc-card
+          *ngFor="let card of cards;let i = index;"
+          [callDestroy]="card.destroyEvent"
+          [orientation]="orientation"
+          (onRelease)="onRelease($event)"
+          (onSwipe)="onSwipe($event)"
+          (onAbort)="onAbort($event)"
+          [tinder-card]="overlay"
+          [callLike]="card.likeEvent"
+          (onLike)="onCardLike($event)">
+          <div class="card-header">
+            <span>{{card.id}}</span>
+          </div>
+          <div class="card-content">
+            <img [src]="card.url" draggable="false"/>
+          </div>
+        </sc-card>
+    </div>
+    <div class="buttons">
+      <button (click)="like(false)">
+        <img src="../../../assets/arrow.png" alt="next" class="next-arrow">
+      </button>
+      <button (click)="like(true)">
+          <img src="../../../assets/heart.png" alt="next" class="like">
+      </button>
+    </div>
+  </div>
