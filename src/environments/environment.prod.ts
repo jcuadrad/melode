@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://melode.herokuapp.com'
+  apiUrl: 'https://melod-server.herokuapp.com'
 };
