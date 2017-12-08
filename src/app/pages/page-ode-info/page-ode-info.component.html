@@ -1,3 +1,8 @@
-<p>
-  page-ode-info works!
-</p>
+<app-nav-bar></app-nav-bar>
+<div class="snippet">
+  <h2>{{sampleOde.snippet}}</h2>
+</div>
+<app-ode-spotify-info [sampleOde]='sampleOde'></app-ode-spotify-info>
+<app-ode-full-lyrics [sampleOde]='sampleOde'></app-ode-full-lyrics>
+<app-ode-genius-fact [sampleOde]='sampleOde'></app-ode-genius-fact>
+<div class="more"></div>

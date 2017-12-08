@@ -1,3 +1,17 @@
-<p>
-  ode-full-lyrics works!
-</p>
+<div class="container">
+  <div class="lyrics-container">
+    <ul>
+      <li *ngFor="let lyric of sampleOde.musixmatch.lyrics | slice:0:sampleOde.musixmatch.lyrics.length - 3">
+        {{ lyric }}
+      </li>
+    </ul>
+  </div>
+  <div class="musixmatch-redirect">
+    <a [href]="sampleOde.musixmatch.fullLink">
+      <div class="content">
+        <p>Get full lyrics here</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Musixmatch_official_logo.png" alt="lyricsLogo">
+      </div>
+    </a>
+  </div>
+</div>

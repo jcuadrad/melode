@@ -42,7 +42,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: PageLoginComponent },
   { path: 'share', component: PageShareOdeComponent },
-  { path: 'browse', component: PageBrowseComponent }
+  { path: 'browse', component: PageBrowseComponent },
+  { path: 'ode', component: PageOdeInfoComponent }
 ];
 
 @NgModule({

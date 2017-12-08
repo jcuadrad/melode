@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ode-genius-fact',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ode-genius-fact.component.css']
 })
 export class OdeGeniusFactComponent implements OnInit {
+
+  @Input() sampleOde;
 
   constructor() { }
 

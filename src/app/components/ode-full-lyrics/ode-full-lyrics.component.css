@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 7vw;
+    background-color: lavenderblush;
+}
+
+.lyrics-container {
+    height: 70%;
+}
+
+.musixmatch-redirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 30%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.musixmatch-redirect img {
+    width: 25vw;
+}
+
+a {
+    color: #111111;
+    text-decoration: none;
+}
+
+ul, li { 
+    font-size: 6vw;
+    font-weight: lighter;
+    line-height: 10vw;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}

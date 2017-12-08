@@ -1,3 +1,12 @@
-<p>
-  ode-spotify-info works!
-</p>
+<div class="container">
+  <div class="image-container">
+    <img [src]="sampleOde.spotify.image" alt="albumcover">
+  </div>
+  <div class="info">
+    <h2>{{sampleOde.spotify.name}}</h2>
+    <h2>{{sampleOde.spotify.artist}}</h2>
+    <a [href]="sampleOde.spotify.uri">
+      <img src="http://www.dittmar.fi/quarterly/2016/q2/assets/img/spotify-button-2.png" alt="spotify-play">
+    </a>
+</div>
+</div>

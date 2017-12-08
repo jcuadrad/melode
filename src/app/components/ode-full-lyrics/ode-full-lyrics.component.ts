@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SlicePipe } from '@angular/common';
 
 @Component({
   selector: 'app-ode-full-lyrics',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ode-full-lyrics.component.css']
 })
 export class OdeFullLyricsComponent implements OnInit {
+
+  @Input() sampleOde;
 
   constructor() { }
 
