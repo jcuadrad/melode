@@ -13,7 +13,8 @@ export class AuthService {
   constructor(private http: Http) { }
 
   login() {
-    return console.log('Going to spotify!');
+    return this.http.get(baseUrl + '/spotify/start')
+    .map(response => response.json());
   }
 
 }
