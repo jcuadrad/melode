@@ -1,8 +1,8 @@
 <app-nav-bar></app-nav-bar>
-<div class="snippet">
-  <h2>{{sampleOde.snippet}}</h2>
+<div *ngIf="ode"  class="snippet">
+  <h2>{{ode.snippet}}</h2>
 </div>
-<app-ode-spotify-info [sampleOde]='sampleOde'></app-ode-spotify-info>
-<app-ode-full-lyrics [sampleOde]='sampleOde'></app-ode-full-lyrics>
-<app-ode-genius-fact [sampleOde]='sampleOde'></app-ode-genius-fact>
+<app-ode-spotify-info [ode]='ode'></app-ode-spotify-info>
+<app-ode-full-lyrics [ode]='ode'></app-ode-full-lyrics>
+<app-ode-genius-fact [ode]='ode'></app-ode-genius-fact>
 <div class="more"></div>

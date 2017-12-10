@@ -25,4 +25,8 @@ export class OdeService {
      .map(response => response.json());
   }
 
+  getOde(id) {
+    return this.http.get(baseUrl + `/${id}`);
+  }
+
 }

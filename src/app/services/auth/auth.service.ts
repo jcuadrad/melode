@@ -10,11 +10,26 @@ const baseUrl = environment.apiUrl + '/auth';
 @Injectable()
 export class AuthService {
 
+  public user;
+
   constructor(private http: Http) { }
+
+  setUser(user) {
+    this.user = user;
+  }
 
   login() {
     return this.http.get(baseUrl + '/spotify/start')
     .map(response => response.json());
+  }
+
+  getMe(id) {
+    return this.http.get(baseUrl + `/me/${id}`);
+  }
+
+  getMeBack() {
+    console.log(this.user);
+    return this.user;
   }
 
 }

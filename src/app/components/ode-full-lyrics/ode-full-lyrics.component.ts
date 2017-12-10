@@ -8,7 +8,7 @@ import { SlicePipe } from '@angular/common';
 })
 export class OdeFullLyricsComponent implements OnInit {
 
-  @Input() sampleOde;
+  @Input() ode;
 
   constructor() { }
 

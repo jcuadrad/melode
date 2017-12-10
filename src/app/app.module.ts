@@ -43,7 +43,7 @@ const routes: Routes = [
   { path: 'login', component: PageLoginComponent },
   { path: 'share', component: PageShareOdeComponent },
   { path: 'browse', component: PageBrowseComponent },
-  { path: 'ode', component: PageOdeInfoComponent }
+  { path: 'ode/:id', component: PageOdeInfoComponent }
 ];
 
 @NgModule({

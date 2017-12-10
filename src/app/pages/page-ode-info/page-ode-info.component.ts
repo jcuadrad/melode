@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { OdeService } from '../../services/ode/ode.service';
 
 @Component({
   selector: 'app-page-ode-info',
@@ -55,9 +57,21 @@ export class PageOdeInfoComponent implements OnInit {
     }
   };
 
-  constructor() { }
+  ode;
+
+  constructor(private activatedRoute: ActivatedRoute, private odeService: OdeService) { }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe((param) => {
+      this.odeService.getOde(param.id)
+      .map((response) => {
+        return response.json();
+      })
+      .subscribe((result) => {
+        this.ode = result.ode;
+        console.log(this.ode);
+      });
+    });
   }
 
 }

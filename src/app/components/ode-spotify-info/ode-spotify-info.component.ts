@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class OdeSpotifyInfoComponent implements OnInit {
 
-  @Input() sampleOde;
+  @Input() ode;
 
   constructor() { }
 

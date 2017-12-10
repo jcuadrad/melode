@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class OdeGeniusFactComponent implements OnInit {
 
-  @Input() sampleOde;
+  @Input() ode;
 
   constructor() { }
 

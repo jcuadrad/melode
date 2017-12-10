@@ -1,6 +1,8 @@
 import { Component, ViewEncapsulation, ViewChild, TemplateRef, EventEmitter, NgModule, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SwipeCardsModule } from 'ng2-swipe-cards';
 import { OdeService } from '../../services/ode/ode.service';
+import { AuthService } from '../../services/auth/auth.service';
 
 const BUFFER = 2;
 
@@ -25,9 +27,10 @@ export class OdeBoxComponent implements OnInit {
   }
   };
 
-  constructor(private odeService: OdeService) {}
+  constructor(private odeService: OdeService, private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
+    // this.authService.
     this.getMore();
   }
 
@@ -55,8 +58,13 @@ export class OdeBoxComponent implements OnInit {
   }
 
   onCardLike(event) {
+    console.log('TRUE MOTHE FUCKER');
     const item = this.odes[this.cardCursor++];
     // DO STUFF WITH YOUR CARD
+    if (event.like === true) {
+      const link = `/ode/${item._id}`;
+      this.router.navigate([link]);
+    }
   }
 
   like(like) {
@@ -67,16 +75,12 @@ export class OdeBoxComponent implements OnInit {
     }
   }
 
-  getKittenUrl() {
-    console.log('Why the fuck am I being called');
-  }
-
   onRelease(event) {
     // this.cardLogs.push('onRelease(event)');
     // this.scrollToBottom(this.cardLogContainer);
     this.getMore();
     console.log('onRelease()');
-    console.log(this.cards);
+    console.log(this.odes);
     console.log(this.cardCursor);
   }
 

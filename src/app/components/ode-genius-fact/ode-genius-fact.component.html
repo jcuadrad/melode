@@ -1,8 +1,8 @@
-<div class="container">
+<div *ngIf="ode" class="container">
   <div class="logo-container">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Genius-logo.png" alt="geniusLogo">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Genius-logo.png" alt="geniusLogo" class="genius-logo">
   </div>
   <div class="genius-fact">
-    <p>{{sampleOde.genius.annotation.join('')}}</p>
+    <p>{{ode.genius.annotation.join('')}}</p>
   </div>
 </div>
