@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrls: ['./page-browse.component.css']
 })
 export class PageBrowseComponent implements OnInit {
-
+  state = 'browse';
   user_id;
   currentUser;
 

@@ -1,19 +1,65 @@
 nav {
+    display: flex;
     height: 15vw;
 }
 
-.nav-logo {
+.nav-logo-left {
+    height: 100%;
+}
+
+.nav-logo-left-hidden {
+    display: none;
+    height: 100%;
+}
+
+.nav-logo-right {
+    height: 100%;
+}
+
+.nav-logo-right-hidden {
+    display: none;
+    height: 100%;
+}
+
+.back-button {
+    height: 100%;
+}
+
+.back-button-hidden {
+    display: none;
+    height: 100%;
+}
+
+.profile {
+    height: 100%;
+}
+
+.profile-hidden {
+    display: none;
+    height: 100%;
+}
+
+.discover {
+    height: 100%;
+}
+
+.discover-hidden {
+    display: none;
     height: 100%;
 }
 
 .left-side {
     height: 100%;
     width: 50%;
+    display: flex;
+    justify-content: flex-start;
     background-color: white;
 }
 
 .right-side {
     width: 50%;
     height: 100%;
+    display: flex;
+    justify-content: flex-end;
     background-color: white;
 }

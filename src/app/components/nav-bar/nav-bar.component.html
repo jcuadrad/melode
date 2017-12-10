@@ -1,7 +1,11 @@
 <nav>
   <div class="left-side">
-    <img src="../../../assets/blac-01.png" alt="logo" class="nav-logo">
+    <img src="../../../assets/blac-01.png" alt="logo" [ngClass]="(state=='share')?'nav-logo-left':'nav-logo-left-hidden'">
+    <img src="../../../assets/arrow.png" alt="back" [ngClass]="(state=='share')?'back-button-hidden':'back-button'">
   </div>
   <div class="right-side">
+    <img src="../../../assets/blac-01.png" alt="logo" [ngClass]="(state=='ode')?'nav-logo-right':'nav-logo-right-hidden' ">
+    <img src="../../../assets/blac-01.png" alt="profile" [ngClass]="(state=='browse')?'profile':'profile-hidden'">
+    <img src="../../../assets/heart.png" alt="discover" [ngClass]="(state=='share')?'discover':'discover-hidden'">
   </div>
 </nav>

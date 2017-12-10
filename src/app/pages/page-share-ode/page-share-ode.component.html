@@ -1,4 +1,4 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar [state]="state"></app-nav-bar>
 <app-overlay-processing *ngIf="processing" class="processing-overlay"></app-overlay-processing>
 <app-ode-form (onSubmit)="handleSubmit($event)"></app-ode-form>
 <div *ngIf="error">{{error}}</div>

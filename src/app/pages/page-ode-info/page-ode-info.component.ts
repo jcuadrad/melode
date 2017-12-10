@@ -9,7 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./page-ode-info.component.css']
 })
 export class PageOdeInfoComponent implements OnInit {
-
+  state = 'ode';
   sampleOde = {
     updated_at: '2017-12-07 23:42:44.013',
     created_at: '2017-12-07 23:42:44.013',

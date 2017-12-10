@@ -9,6 +9,7 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrls: ['./page-share-ode.component.css']
 })
 export class PageShareOdeComponent implements OnInit {
+  state = 'share';
   error = null;
   processing = null;
   user_id;
