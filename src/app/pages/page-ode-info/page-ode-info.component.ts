@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OdeService } from '../../services/ode/ode.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-page-ode-info',
@@ -59,7 +60,7 @@ export class PageOdeInfoComponent implements OnInit {
 
   ode;
 
-  constructor(private activatedRoute: ActivatedRoute, private odeService: OdeService) { }
+  constructor(private activatedRoute: ActivatedRoute, private odeService: OdeService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((param) => {

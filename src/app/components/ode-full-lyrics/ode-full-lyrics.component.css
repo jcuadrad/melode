@@ -5,13 +5,13 @@
     justify-content: space-around;
     margin: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 7vw;
     background-color: lavenderblush;
 }
 
 .lyrics-container {
-    height: 70%;
+    height: auto;
 }
 
 .musixmatch-redirect {

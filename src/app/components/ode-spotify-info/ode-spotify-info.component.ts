@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ode-spotify-info',
@@ -9,9 +10,13 @@ export class OdeSpotifyInfoComponent implements OnInit {
 
   @Input() ode;
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
+  }
+
+  public getSanitizeURI(url) {
+    return this.sanitizer.bypassSecurityTrustUrl(url + ':autoplay:true');
   }
 
 }
