@@ -16,7 +16,8 @@ export class RequireAuthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-      return this.authService.getMeBack().then((user) => {
+      return this.authService.me()
+      .then((user) => {
         if (!user) {
           this.router.navigate(['/login']);
         } else {

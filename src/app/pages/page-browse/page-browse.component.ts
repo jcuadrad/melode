@@ -15,21 +15,21 @@ export class PageBrowseComponent implements OnInit {
   constructor(private authService: AuthService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.currentUser = this.authService.getMeBack();
-      if (!this.currentUser) {
-        this.activatedRoute.queryParams.subscribe((params) => {
-          this.user_id = params.id;
-        });
-        this.authService.getMe(this.user_id)
-        .map((response) => {
-          return response.json();
-        })
-        .subscribe((result) => {
-          this.currentUser = result.user;
-          this.authService.setUser(this.currentUser);
-          console.log(this.currentUser);
-        });
-    }
+    // this.currentUser = this.authService.getMeBack();
+    //   if (!this.currentUser) {
+    //     this.activatedRoute.queryParams.subscribe((params) => {
+    //       this.user_id = params.id;
+    //     });
+    //     this.authService.getMe(this.user_id)
+    //     .map((response) => {
+    //       return response.json();
+    //     })
+    //     .subscribe((result) => {
+    //       this.currentUser = result.user;
+    //       this.authService.setUser(this.currentUser);
+    //       console.log(this.currentUser);
+    //     });
+    // }
   }
 
 }

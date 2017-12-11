@@ -26,6 +26,7 @@ import { PageShareOdeComponent } from './pages/page-share-ode/page-share-ode.com
 import { PageBrowseComponent } from './pages/page-browse/page-browse.component';
 import { PageOdeInfoComponent } from './pages/page-ode-info/page-ode-info.component';
 import { PageUserProfileComponent } from './pages/page-user-profile/page-user-profile.component';
+import { PageLoadingComponent } from './pages/page-loading/page-loading.component';
 
 // Components
 import { OdeFormComponent } from './components/ode-form/ode-form.component';
@@ -38,12 +39,16 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { OverlayProcessingComponent } from './components/overlay-processing/overlay-processing.component';
 
+// Guards
+import { RequireAuthGuard } from './guards/require-auth.guard';
+import { RequireAnonGuard } from './guards/require-anon.guard';
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: PageLoginComponent },
-  { path: 'share', component: PageShareOdeComponent },
-  { path: 'browse', component: PageBrowseComponent },
-  { path: 'ode/:id', component: PageOdeInfoComponent }
+  { path: 'login', canActivate: [RequireAnonGuard], component: PageLoginComponent },
+  { path: 'share', canActivate: [RequireAuthGuard], component: PageShareOdeComponent },
+  { path: 'browse', canActivate: [RequireAuthGuard], component: PageBrowseComponent },
+  { path: 'ode/:id', canActivate: [RequireAuthGuard], component: PageOdeInfoComponent }
 ];
 
 @NgModule({
@@ -63,6 +68,7 @@ const routes: Routes = [
     UserInfoComponent,
     NavBarComponent,
     OverlayProcessingComponent,
+    PageLoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +80,11 @@ const routes: Routes = [
     MatStepperModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ AuthService, UserService, OdeService ],
+  providers: [ AuthService,
+    UserService,
+    OdeService,
+    RequireAuthGuard,
+    RequireAnonGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

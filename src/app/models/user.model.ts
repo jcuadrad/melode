@@ -6,4 +6,8 @@ export class User {
     emails: [{}];
     odesLiked: [{}];
     odesCreated: [{}];
+
+    constructor(obj: Object = {}) {
+        Object.assign(this, obj);
+      }
 }

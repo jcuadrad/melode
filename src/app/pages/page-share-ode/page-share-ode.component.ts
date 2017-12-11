@@ -25,18 +25,20 @@ export class PageShareOdeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.activatedRoute.queryParams.subscribe((params) => {
-      this.user_id = params.id;
-    });
-    this.authService.getMe(this.user_id)
-    .map((response) => {
-      return response.json();
-    })
-    .subscribe((result) => {
-      this.currentUser = result.user;
-      this.authService.setUser(this.currentUser);
-      console.log(this.currentUser);
-    });
+    this.currentUser = this.authService.getUser();
+    console.log(this.currentUser);
+    // this.activatedRoute.queryParams.subscribe((params) => {
+    //   this.user_id = params.id;
+    // });
+    // this.authService.getMe(this.user_id)
+    // .map((response) => {
+    //   return response.json();
+    // })
+    // .subscribe((result) => {
+    //   this.authService.setUser(this.currentUser);
+    //   console.log(this.currentUser);
+    //   this.currentUser = result.user;
+    // });
   }
 
   handleSubmit(newOde) {

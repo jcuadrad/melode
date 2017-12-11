@@ -1,21 +1,32 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/catch';
 
 import { environment } from '../../../environments/environment';
+import { User } from '../../models/user.model';
 
 const baseUrl = environment.apiUrl + '/auth';
 
 @Injectable()
 export class AuthService {
 
+  private loaded = false;
   public user;
+  private userChange: Subject<User | null> = new Subject();
+
+  // Observable string stream
+  userChange$ = this.userChange.asObservable();
 
   constructor(private http: Http) { }
 
-  setUser(user) {
+  setUser(user: User = null) {
+    this.loaded = true;
     this.user = user;
+    this.userChange.next(user);
   }
 
   login() {
@@ -23,12 +34,34 @@ export class AuthService {
     .map(response => response.json());
   }
 
-  getMe(id) {
-    return this.http.get(baseUrl + `/me/${id}`);
+  getMe() {
+    return this.http.get(baseUrl + '/me/id')
+    .map(res => res.json());
   }
 
   getMeBack() {
     console.log(this.user);
+    return this.user;
+  }
+
+  me() {
+    const options = new RequestOptions();
+    options.withCredentials = true;
+    return this.http.get(baseUrl + '/me', options)
+    .toPromise()
+    .then(res => {
+      const user = new User (res.json());
+      this.setUser(user);
+      return user;
+    })
+    .catch((err) => {
+      if (err.status === 404) {
+        this.setUser();
+      }
+    });
+  }
+
+  getUser() {
     return this.user;
   }
 
