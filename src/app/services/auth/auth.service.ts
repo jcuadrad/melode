@@ -34,16 +34,6 @@ export class AuthService {
     .map(response => response.json());
   }
 
-  getMe() {
-    return this.http.get(baseUrl + '/me/id')
-    .map(res => res.json());
-  }
-
-  getMeBack() {
-    console.log(this.user);
-    return this.user;
-  }
-
   me() {
     const options = new RequestOptions();
     options.withCredentials = true;

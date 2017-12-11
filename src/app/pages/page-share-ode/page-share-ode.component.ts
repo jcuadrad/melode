@@ -12,10 +12,8 @@ export class PageShareOdeComponent implements OnInit {
   state = 'share';
   error = null;
   processing = null;
-  user_id;
   currentUser;
   fullOde;
-  private sub;
 
   constructor(
     private odeService: OdeService,
@@ -27,18 +25,6 @@ export class PageShareOdeComponent implements OnInit {
   ngOnInit() {
     this.currentUser = this.authService.getUser();
     console.log(this.currentUser);
-    // this.activatedRoute.queryParams.subscribe((params) => {
-    //   this.user_id = params.id;
-    // });
-    // this.authService.getMe(this.user_id)
-    // .map((response) => {
-    //   return response.json();
-    // })
-    // .subscribe((result) => {
-    //   this.authService.setUser(this.currentUser);
-    //   console.log(this.currentUser);
-    //   this.currentUser = result.user;
-    // });
   }
 
   handleSubmit(newOde) {
@@ -52,7 +38,7 @@ export class PageShareOdeComponent implements OnInit {
       .subscribe(
         () => {
           this.processing = false;
-          this.router.navigate(['/browse'], { queryParams: { id: this.currentUser._id } });
+          this.router.navigate(['/browse']);
         },
         (err) => {
           this.processing = false;

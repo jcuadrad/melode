@@ -26,7 +26,6 @@ import { PageShareOdeComponent } from './pages/page-share-ode/page-share-ode.com
 import { PageBrowseComponent } from './pages/page-browse/page-browse.component';
 import { PageOdeInfoComponent } from './pages/page-ode-info/page-ode-info.component';
 import { PageUserProfileComponent } from './pages/page-user-profile/page-user-profile.component';
-import { PageLoadingComponent } from './pages/page-loading/page-loading.component';
 
 // Components
 import { OdeFormComponent } from './components/ode-form/ode-form.component';
@@ -67,8 +66,7 @@ const routes: Routes = [
     OdeGeniusFactComponent,
     UserInfoComponent,
     NavBarComponent,
-    OverlayProcessingComponent,
-    PageLoadingComponent,
+    OverlayProcessingComponent
   ],
   imports: [
     BrowserModule,
