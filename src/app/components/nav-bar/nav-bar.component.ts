@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,10 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
   @Input() state;
+  @Input() currentUser;
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit() {
+  }
+
+  back() {
+    this.location.back();
   }
 
 }

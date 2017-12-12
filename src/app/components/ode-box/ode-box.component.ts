@@ -58,7 +58,6 @@ export class OdeBoxComponent implements OnInit {
   }
 
   onCardLike(event) {
-    console.log('TRUE MOTHE FUCKER');
     const item = this.odes[this.cardCursor++];
     // DO STUFF WITH YOUR CARD
     if (event.like === true) {
@@ -68,11 +67,16 @@ export class OdeBoxComponent implements OnInit {
   }
 
   like(like) {
-    if (this.odes.length > 0) {
-    this.odes[this.cardCursor++].likeEvent.emit({ like });
+    // if (this.odes.length > 0) {
+    const item = this.odes[this.cardCursor++];
+    item.likeEvent.emit({ like });
     this.getMore();
-    // DO STUFF WITH YOUR CARD
+    if (like === true) {
+      const link = `/ode/${item._id}`;
+      this.router.navigate([link]);
     }
+    // DO STUFF WITH YOUR CARD
+    // }
   }
 
   onRelease(event) {

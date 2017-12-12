@@ -26,6 +26,7 @@ h1 {
 button {
     -webkit-appearance: none;
     border: none;
+    outline: none;
     background-color: transparent;
 }
 

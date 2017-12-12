@@ -1,6 +1,11 @@
 nav {
     display: flex;
-    height: 15vw;
+    height: 18vw;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9000;
 }
 
 .nav-logo-left {
@@ -32,6 +37,7 @@ nav {
 
 .profile {
     height: 100%;
+    border-radius: 50%;
 }
 
 .profile-hidden {
@@ -54,6 +60,7 @@ nav {
     display: flex;
     justify-content: flex-start;
     background-color: white;
+    padding: 2vw;
 }
 
 .right-side {
@@ -62,4 +69,10 @@ nav {
     display: flex;
     justify-content: flex-end;
     background-color: white;
+    padding: 2vw;
+}
+
+button {
+    border: none;
+    height: 100%;
 }

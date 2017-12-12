@@ -47,7 +47,8 @@ const routes: Routes = [
   { path: 'login', canActivate: [RequireAnonGuard], component: PageLoginComponent },
   { path: 'share', canActivate: [RequireAuthGuard], component: PageShareOdeComponent },
   { path: 'browse', canActivate: [RequireAuthGuard], component: PageBrowseComponent },
-  { path: 'ode/:id', canActivate: [RequireAuthGuard], component: PageOdeInfoComponent }
+  { path: 'ode/:id', canActivate: [RequireAuthGuard], component: PageOdeInfoComponent },
+  { path: 'user/:id', canActivate: [RequireAuthGuard], component: PageUserProfileComponent },
 ];
 
 @NgModule({

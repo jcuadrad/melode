@@ -15,6 +15,7 @@ form {
 }
 
 textarea {
+    margin-top: 21vw;
     height: 125vw;
     width: 88vw;
     text-align: center;
@@ -25,6 +26,10 @@ textarea {
 
 .medium textarea {
     font-size: 16vw;
+}  
+
+.small textarea {
+    font-size: 11vw;
 }  
 
 textarea:focus::-webkit-input-placeholder { 
@@ -61,7 +66,7 @@ input[placeholder] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 21vw;
+    margin-top: 40vw;
 }
 
 mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container {

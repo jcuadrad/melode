@@ -2,6 +2,8 @@
     float:left;
     height:100%;
     width:100%;
+    position: relative;
+    overflow: hidden;
     /* max-width:400px; */
   }
   
@@ -20,7 +22,7 @@
     flex-direction: column;
     width:90%;
     height: 83%;
-    margin-top: -11vw;
+    margin-top: 7vw;
     /* margin:10px auto; */
   }
   
@@ -67,10 +69,15 @@
     width: 100%;
     word-wrap: break-word;
     text-align: center;
+    white-space: pre-line;
   }
 
   .medium {
     font-size: 16vw !important;
+ }  
+
+  .small {
+    font-size: 11vw !important;
  }  
   
   .card-content img {

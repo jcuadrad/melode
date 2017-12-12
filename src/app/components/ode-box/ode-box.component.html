@@ -12,7 +12,7 @@
           (onLike)="onCardLike($event)"
           style="box-shadow: none !important;">
           <div class="card-content">
-            <h1 [ngClass]="{medium: ode.document.snippet.length > 30}">{{ode.document.snippet}}</h1>
+            <h1 [ngClass]="{medium: ode.document.snippet.length > 30, small: ode.document.snippet.length > 50}">{{ode.document.snippet}}</h1>
           </div>
         </sc-card>
     </div>
