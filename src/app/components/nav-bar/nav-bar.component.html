@@ -7,11 +7,11 @@
   </div>
   <div class="right-side">
     <img src="../../../assets/blac-01.png" alt="logo" [ngClass]="(state=='ode')?'nav-logo-right':'nav-logo-right-hidden' ">
-    <a *ngIf="currentUser" [routerLink]="['/user', currentUser._id]">
-      <img src="{{currentUser.photos[0]}}" alt="profile" [ngClass]="(state=='browse')?'profile':'profile-hidden'">
+    <a *ngIf="currentUser" [routerLink]="['/user', currentUser._id]" [ngClass]="(state=='browse')?'profile':'profile-hidden'">
+      <img src="{{currentUser.photos[0]}}" alt="profile" class="profile">
     </a>
-    <a [routerLink]="['/browse']">
-      <img src="../../../assets/heart.png" alt="discover" [ngClass]="(state=='share')?'discover':'discover-hidden'">
+    <a [routerLink]="['/browse']" [ngClass]="(state=='share')?'discover':'discover-hidden'">
+      <img src="../../../assets/heart.png" alt="discover" class="discover">
     </a>
   </div>
 </nav>
