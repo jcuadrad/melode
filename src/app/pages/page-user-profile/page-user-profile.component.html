@@ -1,3 +1,6 @@
-<p>
-  page-user-profile works!
-</p>
+<app-nav-bar></app-nav-bar>
+<div class="user-info">
+  <img src="{{currentUser.photos[0]}}" alt="PP">
+  <h1>{{currentUser.name}}</h1>
+</div>
+<app-ode-list [odesLiked]="odesLiked" [myOdes]="myOdes"></app-ode-list>

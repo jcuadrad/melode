@@ -29,4 +29,14 @@ export class OdeService {
     return this.http.get(baseUrl + `/${id}`);
   }
 
+  getUserPopulated (userId) {
+    return this.http.get(baseUrl + `/${userId}` + '/liked')
+    .map(res => res.json());
+  }
+
+  getMyOdes(userId) {
+    return this.http.get(baseUrl + `/${userId}` + '/owned')
+    .map(res => res.json());
+  }
+
 }

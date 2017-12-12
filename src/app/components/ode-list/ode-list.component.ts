@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { OdeService } from '../../services/ode/ode.service';
 
 @Component({
   selector: 'app-ode-list',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OdeListComponent implements OnInit {
 
-  constructor() { }
+  @Input() odesLiked;
+  @Input() myOdes;
+
+  constructor(private odeService: OdeService) { }
 
   ngOnInit() {
   }

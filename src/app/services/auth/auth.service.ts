@@ -55,4 +55,9 @@ export class AuthService {
     return this.user;
   }
 
+  addOde(odeId) {
+    console.log('Ode Liked ID' + odeId);
+    return this.http.post(baseUrl + `/${this.user._id}` + '/ode', odeId);
+  }
+
 }

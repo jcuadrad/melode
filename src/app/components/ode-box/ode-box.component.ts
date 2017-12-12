@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ViewChild, TemplateRef, EventEmitter, NgModule, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, TemplateRef, EventEmitter, NgModule, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { SwipeCardsModule } from 'ng2-swipe-cards';
 import { OdeService } from '../../services/ode/ode.service';
@@ -15,7 +15,6 @@ export class OdeBoxComponent implements OnInit {
 
   loading = true;
   odes: any[] = [];
-  cards: any[] = [];
   cardCursor = 0;
   orientation = 'x';
   overlay: any = {
@@ -26,11 +25,11 @@ export class OdeBoxComponent implements OnInit {
       backgroundColor: '#e92828'
   }
   };
+  @Input() currentUser;
 
   constructor(private odeService: OdeService, private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
-    // this.authService.
     this.getMore();
   }
 
@@ -61,8 +60,13 @@ export class OdeBoxComponent implements OnInit {
     const item = this.odes[this.cardCursor++];
     // DO STUFF WITH YOUR CARD
     if (event.like === true) {
-      const link = `/ode/${item._id}`;
-      this.router.navigate([link]);
+      const odeId = {id: item._id};
+      this.authService.addOde(odeId).subscribe(
+        () => {
+          const link = `/ode/${item._id}`;
+          this.router.navigate([link]);
+        }
+      );
     }
   }
 
