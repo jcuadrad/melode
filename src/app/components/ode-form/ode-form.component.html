@@ -13,7 +13,7 @@
     </mat-step>
     <mat-step [stepControl]="snippetForm">
             <div class="ode-field-info">
-            <input type="text" name="songName" (keyup)="keyUp.next($event)" formControlName="songName" placeholder="Song Name">
+            <input type="text" name="songName" (keydown.enter)="$event.preventDefault()" (keyup)="keyUp.next($event)"  formControlName="songName" placeholder="Song Name">
             <input type="text" name="artist" formControlName="artist" placeholder="Artist">
             <div *ngIf="results" class="autocomplete">
                     <div *ngFor="let result of results" class="result-item" (click)="handleSelect(result)">

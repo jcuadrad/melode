@@ -52,6 +52,12 @@ export class OdeFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    document.addEventListener('keyup', (event) => {
+      event.preventDefault();
+      if (event.keyCode === 13 || event.keyCode === 9) {
+        this.results = null;
+      }
+    });
   }
 
   handleSubmit() {
@@ -67,5 +73,7 @@ export class OdeFormComponent implements OnInit {
     this.results = null;
     console.log(result);
   }
+
+  clearResults(event) {}
 
 }
