@@ -72,3 +72,46 @@ input[placeholder] {
 mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container {
     display: none;
 }
+
+.autocomplete {
+    position: absolute;
+    position: absolute;
+    width: 88vw;
+    height: 63%;
+    overflow: auto;
+    top: 67vw;
+}
+
+.result-item {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+.image-container {
+    width: 26%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image-container img {
+    width: 14vw;
+}
+
+.info {
+    width: 78%;
+    color: white;
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info h2 {
+    margin-bottom: -2vw;
+    font-size: 4vw;
+}

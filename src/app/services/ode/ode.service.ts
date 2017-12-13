@@ -39,4 +39,9 @@ export class OdeService {
     .map(res => res.json());
   }
 
+  autocomplete(artist) {
+    return this.http.post(baseUrl + '/autocomplete', artist)
+    .map(res => res.json());
+  }
+
 }

@@ -13,8 +13,19 @@
     </mat-step>
     <mat-step [stepControl]="snippetForm">
             <div class="ode-field-info">
-            <input type="text" name="songName" formControlName="songName" placeholder="Song Name">
+            <input type="text" name="songName" (keyup)="keyUp.next($event)" formControlName="songName" placeholder="Song Name">
             <input type="text" name="artist" formControlName="artist" placeholder="Artist">
+            <div *ngIf="results" class="autocomplete">
+                    <div *ngFor="let result of results" class="result-item" (click)="handleSelect(result)">
+                            <div class="image-container">
+                                <img [src]="result.image" alt="albumcover">
+                            </div>
+                              <div class="info">
+                                <h2>{{result.name}}</h2>
+                                <p>{{result.artist}}</p>
+                              </div>
+                        </div>
+            </div>
             <div class="field submit">
                 <button mat-button matStepperNext>
                     <img src="../../../assets/arrow.png" alt="next" class="next-arrow">
