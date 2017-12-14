@@ -19,10 +19,10 @@ export class OdeBoxComponent implements OnInit {
   orientation = 'x';
   overlay: any = {
     like: {
-      backgroundColor: 'transparent'
+      backgroundColor: 'antiquewhite'
   },
     dislike: {
-      backgroundColor: '#e92828'
+      backgroundColor: 'black'
   }
   };
   @Input() currentUser;

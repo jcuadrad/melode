@@ -2,13 +2,14 @@
     width: 100%;
     height: 50%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: lightgrey;
+    background-color: #2D3142;
 }
 
 .image-container {
-    width: 50%;
+    width: 36%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -16,21 +17,57 @@
 
 .image-container img {
     width: 35vw;
+    border: 2vw solid antiquewhite;
 }
 
 .info {
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.info a img {
-    width: 83%;
-    margin: 3vw 0vw;
+.info a {
+    width: 100%;
+    text-decoration: none;
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
-    font-size: 4vw;
-    margin: 3vw 0vw;
+    font-size: 7vw;
+    margin: 0vw 0vw;
+    text-align: center;
+    color: antiquewhite;
+}
+
+h4 {
+    font-size: 7vw;
+    font-weight: 100;
+    margin: 0vw 0vw;
+    color: antiquewhite;
+}
+
+.spotify-button {
+    display: flex;
+    width: 75%;
+    height: 8vw;
+    background-color: #181818;
+    border-radius: 4vw;
+    flex-direction: row;
+    padding: 0.4vw;
+    justify-content: space-around;
+}
+
+.spotify-button img {
+    width: 6vw;
+    height: 6vw;
+    margin-right: -1vw;
+    margin-top: 0.6vw;
+}
+
+h3 {
+    color: antiquewhite;
+    margin: 0;
 }

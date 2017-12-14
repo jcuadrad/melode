@@ -10,18 +10,18 @@
           [tinder-card]="overlay"
           [callLike]="ode.likeEvent"
           (onLike)="onCardLike($event)"
-          style="box-shadow: none !important;">
+          style="box-shadow: none !important; background-color: #657ED4; border: none;">
           <div class="card-content">
-            <h1 [ngClass]="{medium: ode.document.snippet.length > 30, small: ode.document.snippet.length > 50}">{{ode.document.snippet}}</h1>
+            <h1 [ngClass]="{medium: ode.snippet.length > 30, small: ode.snippet.length > 50}">{{ode.snippet}}</h1>
           </div>
         </sc-card>
     </div>
     <div class="buttons">
       <button (click)="like(false)">
-        <img src="../../../assets/arrow.png" alt="next" class="next-arrow">
+        <img src="../../../assets/arrow-left-white.png" alt="next" class="next-arrow">
       </button>
       <button (click)="like(true)">
-          <img src="../../../assets/heart.png" alt="next" class="like">
+          <img src="../../../assets/like-white.png" alt="next" class="like">
       </button>
     </div>
   </div>

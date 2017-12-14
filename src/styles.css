@@ -11,7 +11,7 @@ html {
 /* -- typography -- */
 
 html, body {
-    font-family: "Roboto";
+    font-family: "Oswald";
     height: 100%;
     margin: 0;
     padding: 0;
@@ -19,6 +19,8 @@ html, body {
 
 h1 {
     font-size: 13vw;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 /* -- components -- */

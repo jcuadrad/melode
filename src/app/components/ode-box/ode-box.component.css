@@ -4,6 +4,7 @@
     width:100%;
     position: relative;
     overflow: hidden;
+    background-color: #657ED4;
     /* max-width:400px; */
   }
   
@@ -70,14 +71,18 @@
     word-wrap: break-word;
     text-align: center;
     white-space: pre-line;
+    color: antiquewhite;
+    line-height: 23vw;
   }
 
   .medium {
     font-size: 16vw !important;
+    line-height: 18vw !important;
  }  
 
   .small {
-    font-size: 11vw !important;
+    font-size: 9vw !important;
+    line-height: 13vw !important;
  }  
   
   .card-content img {

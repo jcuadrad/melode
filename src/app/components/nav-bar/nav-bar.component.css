@@ -59,20 +59,61 @@ nav {
     width: 50%;
     display: flex;
     justify-content: flex-start;
-    background-color: white;
+    background-color: transparent;
+    padding: 2vw;
+}
+
+.left-side-ode {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: antiquewhite;
     padding: 2vw;
 }
 
 .right-side {
+    width: 51%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding: 2vw;
+}
+
+.right-side-ode {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
-    background-color: white;
+    background-color: antiquewhite;
     padding: 2vw;
+}
+
+.right-side-ode a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 3.5vw;
+    padding-right: 2vw;
+    margin-top: -2vw;
+}
+
+.right-side-ode h2 {
+    color: #2D3142;
+    border-bottom: 1vw solid #2D3142;
+    line-height: 17vw;
 }
 
 button {
     border: none;
     height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+
 }

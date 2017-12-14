@@ -36,9 +36,9 @@ export class OdeFormComponent implements OnInit {
   constructor(private odeService: OdeService) {
     const subscription = this.keyUp
     .map(event => event.target.value)
-    .debounceTime(1000)
+    .debounceTime(500)
     .distinctUntilChanged()
-    .mergeMap(search => Observable.of(search).delay(500))
+    .mergeMap(search => Observable.of(search).delay(250))
     .subscribe( (res) => {
       const artist = {
         artist: res

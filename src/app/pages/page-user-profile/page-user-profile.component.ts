@@ -8,7 +8,7 @@ import { OdeService } from '../../services/ode/ode.service';
   styleUrls: ['./page-user-profile.component.css']
 })
 export class PageUserProfileComponent implements OnInit {
-
+  state = 'profile';
   currentUser;
   odesLiked;
   myOdes;

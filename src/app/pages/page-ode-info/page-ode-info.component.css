@@ -6,4 +6,10 @@
     align-items: center;
     padding: 7vw;
     text-align: center;
+    background-color: antiquewhite;
+}
+
+h2 {
+    color: #2D3142;
+    text-transform: uppercase;
 }

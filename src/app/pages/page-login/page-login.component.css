@@ -20,9 +20,17 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: #657ED4;
 }
 
 h1 {
     margin-bottom: -33vw;
     margin-top: -6vw;
+    color: antiquewhite;
+}
+
+p {
+    font-size: 7vw;
+    text-align: center;
+    color: antiquewhite;
 }

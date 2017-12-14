@@ -1,17 +1,24 @@
 <nav>
-  <div class="left-side">
-    <img src="../../../assets/blac-01.png" alt="logo" [ngClass]="(state=='share')?'nav-logo-left':'nav-logo-left-hidden'">
-    <button (click)="back()">
-      <img src="../../../assets/arrow.png" alt="back" [ngClass]="(state=='share')?'back-button-hidden':'back-button'">
+  <div [ngClass]="{'left-side': state==='browse' || state==='profile', 'left-side-ode': state==='ode' || state==='share'}">
+    <img src="../../../assets/logo-blue-01.png" alt="logo" [ngClass]="(state==='share')?'nav-logo-left':'nav-logo-left-hidden'">
+    <button [routerLink]="['/share']" [ngClass]="(state==='browse')?'show':'hide'">
+      <img src="../../../assets/arrow-left-white.png" alt="back" [ngClass]="(state==='browse')?'back-button':'back-button-hidden'">
+    </button>
+    <button (click)="back()" [ngClass]="(state==='ode')?'show':'hide'">
+      <img src="../../../assets/arrow-left-blue.png" alt="back" [ngClass]="(state==='ode')?'back-button':'back-button-hidden'">
+    </button>
+    <button (click)="back()" [ngClass]="(state==='profile')?'show':'hide'">
+      <img src="../../../assets/arrow-left-white.png" alt="back" [ngClass]="(state==='profile')?'back-button':'back-button-hidden'">
     </button>
   </div>
-  <div class="right-side">
-    <img src="../../../assets/blac-01.png" alt="logo" [ngClass]="(state=='ode')?'nav-logo-right':'nav-logo-right-hidden' ">
-    <a *ngIf="currentUser" [routerLink]="['/user', currentUser._id]" [ngClass]="(state=='browse')?'profile':'profile-hidden'">
+  <div [ngClass]="{'right-side': state==='browse' || state==='profile', 'right-side-ode': state==='ode' || state==='share'}">
+    <img src="../../../assets/logo-blue-01.png" alt="logo" [ngClass]="(state==='ode')?'nav-logo-right':'nav-logo-right-hidden' ">
+    <img src="../../../assets/logo-white-01.png" alt="logo" [ngClass]="(state==='profile')?'nav-logo-right':'nav-logo-right-hidden' ">
+    <a *ngIf="currentUser" [routerLink]="['/user', currentUser._id]" [ngClass]="(state==='browse')?'profile':'profile-hidden'">
       <img src="{{currentUser.photos[0]}}" alt="profile" class="profile">
     </a>
-    <a [routerLink]="['/browse']" [ngClass]="(state=='share')?'discover':'discover-hidden'">
-      <img src="../../../assets/heart.png" alt="discover" class="discover">
+    <a [routerLink]="['/browse']" [ngClass]="(state==='share')?'discover':'discover-hidden'">
+      <h2 [ngClass]="(state==='share')?'discover':'discover-hidden'">DISCOVER</h2>
     </a>
   </div>
 </nav>

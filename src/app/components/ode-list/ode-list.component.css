@@ -9,7 +9,7 @@ ul, li {
 }
 
 .liked-container {
-    background-color: #111111;
+    background-color: #2D3142;
     height: auto;
     padding: 7vw 4vw;
 }
@@ -17,10 +17,11 @@ ul, li {
 .liked-container h1 {
     margin: 0vw 5vw;
     font-size: 8vw;
+    color: antiquewhite;
 }
 
 .list-container {
-    background-color: grey;
+    background-color: antiquewhite;
     height: auto;
     padding: 7vw 4vw;
 }
@@ -28,6 +29,7 @@ ul, li {
 .list-container h1 {
     margin: 0vw 5vw;
     font-size: 8vw;
+    color: #2D3142;
 }
 
 
@@ -48,6 +50,11 @@ ul, li {
 
 .image-container img {
     width: 15vw;
+    border: 1vw solid #2D3142;
+}
+
+.liked-container img  {
+    border: 1vw solid antiquewhite;
 }
 
 .info {
@@ -59,7 +66,28 @@ ul, li {
     align-items: flex-start;
 }
 
-.info h2 {
-    margin-bottom: -2vw;
+.liked-container h2 {
+    margin: 0vw;
     font-size: 4vw;
+    color: antiquewhite;
+}
+
+.list-container h2 {
+    margin: 0vw;
+    font-size: 4vw;
+    color: #2D3142;
+}
+
+.list-container p {
+    margin: 0;
+    color: #2D3142;
+}
+
+.go-arrow {
+    height: 100%;
+}
+
+.go-arrow img {
+    height: 7vw;
+    border: none;
 }
