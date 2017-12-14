@@ -17,7 +17,6 @@ export class PageUserProfileComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = this.authService.getUser();
-    console.log(this.currentUser);
     this.odeService.getUserPopulated(this.currentUser._id)
     .subscribe(
       (user) => {

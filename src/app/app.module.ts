@@ -14,7 +14,6 @@ import { MatStepperModule } from '@angular/material';
 
 // Services
 import { AuthService } from './services/auth/auth.service';
-import { UserService } from './services/user/user.service';
 import { OdeService } from './services/ode/ode.service';
 
 
@@ -80,7 +79,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [ AuthService,
-    UserService,
     OdeService,
     RequireAuthGuard,
     RequireAnonGuard ],

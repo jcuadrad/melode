@@ -22,7 +22,6 @@ export class PageLoginComponent implements OnInit {
       .subscribe(
         (result) => {
           const results = result.url;
-          console.log(typeof results);
           window.location.href = results;
         }
       );

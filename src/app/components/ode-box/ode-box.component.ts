@@ -48,17 +48,11 @@ export class OdeBoxComponent implements OnInit {
           value: new EventEmitter()
         }));
         this.odes = this.odes.concat(newResult);
-        console.log(newResult);
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+    });
   }
 
   onCardLike(event) {
     const item = this.odes[this.cardCursor++];
-    // DO STUFF WITH YOUR CARD
     if (event.like === true) {
       const odeId = {id: item._id};
       this.authService.addOde(odeId).subscribe(
@@ -71,7 +65,6 @@ export class OdeBoxComponent implements OnInit {
   }
 
   like(like) {
-    // if (this.odes.length > 0) {
     const item = this.odes[this.cardCursor++];
     item.likeEvent.emit({ like });
     this.getMore();
@@ -79,23 +72,14 @@ export class OdeBoxComponent implements OnInit {
       const link = `/ode/${item._id}`;
       this.router.navigate([link]);
     }
-    // DO STUFF WITH YOUR CARD
-    // }
   }
 
   onRelease(event) {
-    // this.cardLogs.push('onRelease(event)');
-    // this.scrollToBottom(this.cardLogContainer);
     this.getMore();
-    console.log('onRelease()');
-    console.log(this.odes);
-    console.log(this.cardCursor);
   }
 
   onAbort(event) {
-    // this.cardLogs.push('onAbort(event)');
     console.log('onAbort()');
-    // this.scrollToBottom(this.cardLogContainer);
   }
 
   onSwipe(event) {

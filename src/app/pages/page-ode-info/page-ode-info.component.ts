@@ -22,7 +22,6 @@ export class PageOdeInfoComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = this.authService.getUser();
-    console.log(this.currentUser);
     this.activatedRoute.params.subscribe((param) => {
       this.odeService.getOde(param.id)
       .map((response) => {
@@ -30,7 +29,6 @@ export class PageOdeInfoComponent implements OnInit {
       })
       .subscribe((result) => {
         this.ode = result.ode;
-        console.log(this.ode);
       });
     });
   }

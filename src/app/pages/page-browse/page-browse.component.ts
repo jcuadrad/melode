@@ -15,7 +15,6 @@ export class PageBrowseComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = this.authService.getUser();
-    console.log(this.currentUser);
   }
 
 }

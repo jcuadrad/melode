@@ -9,8 +9,19 @@ body, html {
 }
 
 .connect {
-    width: 100%;
+    width: 67vw;
     height: 15vw;
+    display: flex;
+    background-color: #2D3142;
+    border-radius: 9vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect img {
+    width: 8vw;
+    height: 8vw;
+    margin-right: 4vw;
 }
 
 .container {
@@ -27,6 +38,13 @@ h1 {
     margin-bottom: -33vw;
     margin-top: -6vw;
     color: antiquewhite;
+}
+
+h2 {
+    color: antiquewhite;
+    font-weight: 200;
+    margin: 0;
+    font-size: 5vw;
 }
 
 p {

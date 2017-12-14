@@ -24,7 +24,6 @@ export class PageShareOdeComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = this.authService.getUser();
-    console.log(this.currentUser);
   }
 
   handleSubmit(newOde) {
@@ -47,5 +46,4 @@ export class PageShareOdeComponent implements OnInit {
         }
       );
   }
-
 }

@@ -71,7 +71,6 @@ export class OdeFormComponent implements OnInit {
       }
     );
     this.results = null;
-    console.log(result);
   }
 
   clearResults(event) {}
