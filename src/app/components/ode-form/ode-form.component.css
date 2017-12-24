@@ -84,6 +84,10 @@ input[placeholder] {
     margin-top: 40vw;
 }
 
+mat-horizontal-stepper ::ng-deep .mat-horizontal-content-container {
+    background-color: antiquewhite;
+}
+
 mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container {
     display: none;
 }
@@ -131,4 +135,33 @@ mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container {
 .info h2 {
     margin-bottom: -2vw;
     font-size: 4vw;
+}
+
+@media (min-width: 768px) {
+
+    textarea[placeholder] {
+        font-size: 18vw;
+        line-height: 19vw;
+    }
+
+    textarea {
+        margin-top: 15vw;
+        height: 100vw;
+    }
+
+    .next-arrow {
+        width: 15vw;
+    }
+
+    .ode-field-info {
+        margin-top: 20vw;
+    }
+
+    .field-submit {
+        margin-top: -11vw;
+    }
+
+    .autocomplete {
+        top: 47vw;
+    }
 }

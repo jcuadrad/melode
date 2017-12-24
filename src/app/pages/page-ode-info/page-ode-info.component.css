@@ -13,3 +13,10 @@ h2 {
     color: #2D3142;
     text-transform: uppercase;
 }
+
+@media (min-width: 768px) {
+    .snippet h2 {
+        font-size: 5vw;
+        margin-top: 12vw;
+    }
+}

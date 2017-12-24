@@ -96,7 +96,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;;
+    flex-direction: row;
+    position: relative;
+    z-index: 20;
   }
   
   /* .buttons button {
@@ -120,4 +122,25 @@
 
   .card-container ::ng-deep .card-heap[_nghost-c4]:nth-child(1) {
     box-shadow: none !important;
+  }
+
+  @media (min-width: 768px) {
+
+    sc-card {
+      max-width: 693px;
+    }
+
+    .small {
+      font-size: 8vw !important;
+      line-height: 12vw !important;
+    }
+
+    .next-arrow {
+      width: 15vw;
+    }
+
+    .like {
+      width: 15vw;
+    }
+
   }

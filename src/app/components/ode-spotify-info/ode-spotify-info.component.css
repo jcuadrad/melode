@@ -42,9 +42,20 @@ h2 {
     color: antiquewhite;
 }
 
+.small {
+    font-size: 4vw;
+    text-align: center;
+}
+
+.small-artist {
+    font-size: 4vw;
+    text-align: center;
+}
+
 h4 {
     font-size: 7vw;
     font-weight: 100;
+    text-align: center;
     margin: 0vw 0vw;
     color: antiquewhite;
 }
@@ -70,4 +81,20 @@ h4 {
 h3 {
     color: antiquewhite;
     margin: 0;
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        flex-direction: row
+    }
+
+    h2, h4 {
+        font-size: 6vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
 }

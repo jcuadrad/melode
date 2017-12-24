@@ -4,8 +4,8 @@
     <audio src="{{ode.spotify.preview}}"></audio>
   </div>
   <div class="info">
-    <h2>{{ode.spotify.name}}</h2>
-    <h4>{{ode.spotify.artist}}</h4>
+    <h2 [ngClass]="{small: ode.spotify.name.length > 20}">{{ode.spotify.name}}</h2>
+    <h4 [ngClass]="{small: ode.spotify.artist.length > 20}">{{ode.spotify.artist}}</h4>
     <a [href]="getSanitizeURI(ode.spotify.uri)">
       <div class="spotify-button">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2000px-Spotify_logo_without_text.svg.png" alt="logo">

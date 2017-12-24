@@ -16,7 +16,7 @@ export class OdeSpotifyInfoComponent implements OnInit {
   }
 
   public getSanitizeURI(url) {
-    return this.sanitizer.bypassSecurityTrustUrl(url);
+    return this.sanitizer.bypassSecurityTrustUrl(url + ':autoplay:true');
   }
 
 }
