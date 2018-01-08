@@ -165,3 +165,70 @@ mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container {
         top: 47vw;
     }
 }
+
+@media (min-width: 1080px) {
+
+    textarea[placeholder] {
+        font-size: 3vw;
+        line-height: 32vw;
+    }
+
+    textarea {
+        margin-top: 7vw;
+        height: 35vw;
+    }
+
+    .next-arrow {
+        width: 4vw;
+    }
+
+    .medium textarea {
+        font-size: 3vw;
+    }  
+    
+    .small textarea {
+        font-size: 3vw;
+        line-height: 5vw;
+    }  
+
+    .ode-field-info {
+        margin-top: 9vw;
+    }
+
+    input[placeholder] {
+        font-size: 3vw;
+    }
+
+    input {
+        height: 7vw;
+        width: 55vw;
+        border-bottom: 0.1vw solid grey;
+        margin-bottom: 10vw;
+    }
+
+    .field-submit {
+        margin-top: 0vw;
+    }
+
+    .autocomplete {
+        top: 16vw;
+        width: 55vw;
+    }
+
+    .result-item {
+        height: 25%;
+    }
+
+    .image-container img {
+        width: 7vw;
+    }
+
+    .info h2 {
+        margin: 0vw;
+        font-size: 2vw;
+    }
+
+    .info p {
+        margin: 0vw;
+    }
+}

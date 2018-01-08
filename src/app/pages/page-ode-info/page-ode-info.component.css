@@ -9,6 +9,18 @@
     background-color: antiquewhite;
 }
 
+.container {
+    height: 100%;
+}
+
+.top {
+    height: 100%;
+}
+
+.bottom {
+    height: 100%;
+}
+
 h2 {
     color: #2D3142;
     text-transform: uppercase;
@@ -18,5 +30,37 @@ h2 {
     .snippet h2 {
         font-size: 5vw;
         margin-top: 12vw;
+    }
+}
+
+@media (min-width: 1080px) {
+    .container {
+        width: 100%;
+    }
+    
+    .top {
+        width: 100%;
+        display: flex;
+    }
+    
+    .bottom {
+        height: 100%;
+    }
+
+    .snippet {
+        width: 50%;
+        height: 100%;
+    }
+
+    .snippet h2 {
+        margin-top: 4vw;
+    }
+
+    .small {
+        font-size: 3vw !important;
+    }
+
+    app-ode-spotify-info {
+        width: 50%;
     }
 }

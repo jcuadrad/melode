@@ -35,6 +35,7 @@ body, html {
 }
 
 h1 {
+    font-weight: 100;
     margin-bottom: -33vw;
     margin-top: -6vw;
     color: antiquewhite;
@@ -48,7 +49,55 @@ h2 {
 }
 
 p {
+    font-weight: 100;
     font-size: 7vw;
     text-align: center;
     color: antiquewhite;
 }
+
+@media (min-width: 700px) {
+    
+        p {
+            font-size: 5vw;
+            margin-top: 12vw;
+        }
+    
+    }
+
+@media (min-width: 1080px) {
+
+        /* .container {
+            justify-content: center
+        } */
+
+        .logo {
+            width: 5vw;
+        }
+
+        h1 {
+            font-size: 3vw;
+            margin-bottom: -190px;
+            margin-top: 0;
+        }
+    
+        p {
+            font-size: 2vw;
+            margin-top: 0;
+        }
+
+        .connect {
+            width: 28vw;
+            height: 5vw;
+        }
+
+        .connect img {
+            width: 3vw;
+            height: 3vw;
+            margin-right: 2vw;
+        }
+
+        h2 {
+            font-size: 2vw;
+        }
+    
+    }

@@ -1,6 +1,8 @@
 <app-nav-bar [state]="state"></app-nav-bar>
-<div class="user-info">
-  <img src="{{currentUser.photos[0]}}" alt="PP">
-  <h1>{{currentUser.name}}</h1>
+<div class="container">
+  <div class="user-info">
+    <img src="{{currentUser.photos[0]}}" alt="PP">
+    <h1>{{currentUser.name}}</h1>
+  </div>
+  <app-ode-list [odesLiked]="odesLiked" [myOdes]="myOdes"></app-ode-list>
 </div>
-<app-ode-list [odesLiked]="odesLiked" [myOdes]="myOdes"></app-ode-list>

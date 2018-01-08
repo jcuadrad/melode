@@ -26,6 +26,15 @@ nav {
     height: 100%;
 }
 
+.nav-logo-right-white {
+    height: 100%;
+}
+
+.nav-logo-right-white-hidden {
+    display: none;
+    height: 100%;
+}
+
 .back-button {
     height: 100%;
 }
@@ -126,5 +135,29 @@ button {
     .right-side-ode h2 {
         line-height: 13vw;
         font-size: 3.5vw;
+    }
+}
+
+@media (min-width: 1080px) {
+    nav {
+        height: 8vw;
+    }
+
+    .right-side-ode h2 {
+        line-height: 5vw;
+        font-size: 1.5vw;
+        border-bottom: 0.4vw solid #2D3142;
+    }
+
+    .left-side-ode {
+        background-color: transparent;
+    }
+
+    .right-side-ode {
+        background-color: transparent;
+    }
+
+    .nav-logo-right-white {
+        display: none;
     }
 }

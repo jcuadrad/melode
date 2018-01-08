@@ -144,3 +144,43 @@
     }
 
   }
+
+  @media (min-width: 1080px) {
+
+    .card-container {
+      height: 70%;
+      margin-top: 6vw;
+    }
+
+    .card-content h1 {
+      font-size: 4vw;
+    }
+
+    sc-card {
+      max-width: 1715px;
+    }
+
+    .small {
+      font-size: 4vw !important;
+      line-height: 6vw !important;
+    }
+
+    .medium {
+      font-size: 4vw !important;
+      line-height: 6vw !important;
+    }
+
+    .buttons {
+      height: 30%;
+      margin-top: -3vw;
+    }
+
+    .next-arrow {
+      width: 4vw;
+    }
+
+    .like {
+      width: 4vw;
+    }
+
+  }

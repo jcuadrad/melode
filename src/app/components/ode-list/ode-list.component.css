@@ -91,3 +91,56 @@ ul, li {
     height: 7vw;
     border: none;
 }
+
+@media (min-width: 1080px) {
+
+    .container {
+        height: 100%;
+    }
+
+    .liked-container {
+        height: 50%;
+        overflow: auto;
+        padding: 2vw 4vw;
+    }
+
+    .liked-container h1 {
+        margin: 0vw;
+        font-size: 2vw;
+    }
+
+    .liked-container img {
+        border: 0.3vw solid antiquewhite;
+    }
+
+    .image-container img {
+        width: 4vw;
+        border: 0.3vw solid #2D3142;
+    }
+
+    .liked-container h2 {
+        margin: 0vw;
+        font-size: 0.9vw;
+    }
+
+    .go-arrow img {
+        height: 2vw;
+        border: none;
+    }
+
+    .list-container {
+        height: 50%;
+        overflow: auto;
+        padding: 2vw 4vw;
+    }
+
+    .list-container h1 {
+        margin: 0vw;
+        font-size: 2vw;
+    }
+
+    .list-container h2 {
+        margin: 0vw;
+        font-size: 0.9vw;
+    }
+}
