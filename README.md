@@ -12,4 +12,4 @@ Simple app made for lyric lovers. Reconnect with old songs and share the lyrics 
 🏆 Validates users through Spotify's API OAuth 2.0.    
 🎹 Autocomplete and play on the app integration with Spotify API.    
 💿 Integrates with Musixmatch API to find lyrics of the song you share dynamically.    
-🎵 Finds curios facts about the songs through the Genius API.
+🎵 Finds curious facts about the songs through the Genius API.
