@@ -1,27 +1,15 @@
+
 # Melode
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
+🎶🎧 Find & share music through the lyrics that you love. 
 
-## Development server
+Third project for @Ironhack WebDev bootcamp. Made using MEAN stack tools (MongoDB, Express, Angular 4 & NodeJs).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Simple app made for lyric lovers. Reconnect with old songs and share the lyrics that moved you. Simply log in with your Spotify account, share a lyric snippet, and then swipe right or left with the 'Odes' shared by everybody else. If you find an Ode you like, you immediately access the full lyrics, play it on Spotify and get some curious facts about the song.
 
-## Code scaffolding
+## Highlights
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ 🏆 Validates users through Spotify's API OAuth 2.0.
+ 🎹 Autocomplete and play on the app integration with Spotify API.
+ 💿 Integrates with Musixmatch API to find lyrics of the song you share dynamically.
+ 🎵 Finds curios facts about the songs through the Genius API.
